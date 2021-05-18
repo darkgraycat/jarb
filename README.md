@@ -10,4 +10,4 @@
     npm install
     npm start
   ```
-2. Open `index.html` with Live Server
+2. Open index.html with Live Server
