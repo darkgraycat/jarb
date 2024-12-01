@@ -1,12 +1,12 @@
 {
   "name": "dgcjarb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Just another React boilerplate for U my dear friend",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "NODE_ENV=production node esbuild.config.js",
+    "start": "NODE_ENV=development node esbuild.config.js --watch --serve"
   },
   "repository": {
     "type": "git",
@@ -18,20 +18,16 @@
     "url": "https://github.com/darkgraycat/jarb/issues"
   },
   "homepage": "https://github.com/darkgraycat/jarb#readme",
-  "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/preset-react": "^7.13.13",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.4",
-    "file-loader": "^6.2.0",
-    "sass": "^1.32.12",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.36.1",
-    "webpack-cli": "^4.6.0"
-  },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "dotenv": "^16.4.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "esbuild": "^0.24.0",
+    "esbuild-sass-plugin": "^3.3.1",
+    "typescript": "^5.7.2"
   }
 }

@@ -1,21 +1,22 @@
 @mixin flex($direction, $justify, $align) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 }
 
 .App {
-  @include flex(column, space-around, center);
-  margin: 0 auto;
+    @include flex(column, space-around, center);
+    margin: 0 auto;
 
-  h1 {
-    font-family: monospace;
-  }
+    background-color: "red";
 
-  img {
-    width: 100px;
-    height: auto;
-  }
+    h1 {
+        font-family: monospace;
+    }
+
+    img {
+        width: 100px;
+        height: auto;
+    }
 }
-
